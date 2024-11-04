@@ -1,8 +1,16 @@
-import React from "react";
-import search from "../../assets/search.svg"
-import profile from "../../assets/profile.svg"
-import cart from "../../assets/cart.svg"
+import React, { useContext } from "react";
+import search from "../../assets/search.svg";
+import profile from "../../assets/profile.svg";
+import cart from "../../assets/cart.svg";
+import { ModalContext } from "../../contexts/ModalContext";
 function Navbar() {
+  const { ModalOpen, setModalOpen } = useContext(ModalContext);
+
+  const handleLoginModal = () => {
+    console.log(ModalOpen)
+    setModalOpen(!ModalOpen);
+    console.log("hello", ModalOpen);
+  };
   return (
     <div>
       <div className=" flex justify-between mt-2 mb-3">
@@ -17,30 +25,41 @@ function Navbar() {
               className="border-r border-black w-[70%] outline-none rounded-l-3xl h-10 text-1xl p-1"
               placeholder="Search for shoes, clothes,etc"
               type="text"
-
             />
             <button className="w-20 m-auto font-semibold">search</button>
           </div>
         </div>
         <div className="flex gap-6 ">
-          <img className="h-8 m-auto" src={profile} alt="img" />
-          <img className="h-8 m-auto" src={cart} alt="img2" />
+          <img
+            onClick={handleLoginModal}
+            className="h-8 m-auto"
+            src={profile}
+            alt="img"
+          />
+          <img
+            className="h-8 m-auto"
+            onClick={() => {
+              alert("hello i am bag");
+            }}
+            src={cart}
+            alt="img2"
+          />
         </div>
       </div>
       <div className="flex justify-between">
-     <div className="flex list-none gap-7 font-bold">
-     <li>New</li>
-        <li>Women</li>
-        <li>Men</li>
-        <li>Kids</li>
-        <li>Collections</li>
-        <li>Brands</li>
-        <li> sale</li>
-        <li>Gifts</li>
-     </div>
-     <div className=" font-bold">
-        <h1>Help & Support</h1>
-     </div>
+        <div className="flex list-none gap-7 font-bold">
+          <li>New</li>
+          <li>Women</li>
+          <li>Men</li>
+          <li>Kids</li>
+          <li>Collections</li>
+          <li>Brands</li>
+          <li> sale</li>
+          <li>Gifts</li>
+        </div>
+        <div className=" font-bold">
+          <h1>Help & Support</h1>
+        </div>
       </div>
     </div>
   );

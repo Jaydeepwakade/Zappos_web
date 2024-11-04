@@ -5,8 +5,9 @@ import Navbar from '../Navbar_&_Footer/Navbar'
 function Home() {
   return (
     <div>
-     Home
+      <h1>Welcome to home page</h1>
     </div>
+    
     
   )
 }
