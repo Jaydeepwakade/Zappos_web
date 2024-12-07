@@ -11,7 +11,7 @@ function LoginModal() {
   };
   return (
     <div className=" fixed  inset-0 bg-opacity-50 m-auto flex justify-center items-center">
-      (
+      
       <div className=" w-2/4 h-auto shadow-lg bg-white  border rounded-2xl">
         <div className="flex justify-between   border-b-2 border-gray-400">
           <h1 className="font-bold text-2xl mb-6 m-3">Sign-In</h1>
@@ -73,7 +73,7 @@ function LoginModal() {
           </div>
         </div>
       </div>
-      )
+      
     </div>
   );
 }

@@ -10,13 +10,15 @@ import Pagenotfound from "./components/pagenofound/Pagenotfound";
 
 function App() {
   return (
-    <>
-      <Routes>
+   <div className="m-4">
+ <Routes >
         <Route path="*" element={<Pagenotfound/>}/>
         <Route path="/" element={<MainHome/>}/>
         <Route path="/home" element={<Home/>}/>
       </Routes>
-    </>
+    
+   </div>
+     
   );
 }
 
