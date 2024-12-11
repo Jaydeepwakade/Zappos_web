@@ -16,9 +16,10 @@ function MainHome() {
   return (
     <>
       <Navbar />
-      this is main home
+     
       {newModalopen && <NewModal />}
       {ModalOpen && <LoginModal />}
+      this is 
       
       <Outlet />
     </>
