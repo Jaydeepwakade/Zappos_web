@@ -14,14 +14,16 @@ function Navbar() {
   const handleLoginModal = () => {
     console.log(ModalOpen);
     setModalOpen(!ModalOpen);
+
     console.log("hello", ModalOpen);
   };
   const handlenewButton = () => {
     console.log(newModalopen);
-    setnewModalopen(!newModalopen);
+    setnewModalopen("New");
     setnavActive("new");
     console.log(!newModalopen);
   };
+
   return (
     <div>
       <div className=" flex justify-between  mt-2 mb-3">
@@ -62,51 +64,99 @@ function Navbar() {
         <div className="flex list-none gap-7 w-20  font-bold">
           <li
             onClick={handlenewButton}
-            className={navActive === "new" ? "bg-black rounded rounded-lg p-2 text-white" : ""}
+            className={
+              navActive === "new"
+                ? "bg-black rounded rounded-lg p-2 text-white"
+                : ""
+            }
           >
             new
           </li>
           <li
-            onClick={() => setnavActive("women")}
-            className={navActive === "women" ? "bg-black rounded rounded-lg p-2 text-white" : ""}
+            onClick={() => {
+              setnavActive("women");
+              setnewModalopen("women");
+            }}
+            className={
+              navActive === "women"
+                ? "bg-black rounded rounded-lg p-2 text-white"
+                : ""
+            }
           >
             women
           </li>
 
           <li
-            onClick={() => setnavActive("men")}
-            className={navActive === "men" ? "bg-black rounded rounded-lg p-2 text-white" : ""}
+            onClick={() => {
+              setnavActive("men");
+              setnewModalopen("men")
+            }}
+            className={
+              navActive === "men"
+                ? "bg-black rounded rounded-lg p-2 text-white"
+                : ""
+            }
           >
             Men
           </li>
           <li
-            onClick={() => setnavActive("kids")}
-            className={navActive === "kids" ? "bg-black rounded rounded-lg p-2 text-white" : ""}
+            onClick={() => {setnavActive("kids")
+              setnewModalopen("kids")
+            }}
+            className={
+              navActive === "kids"
+                ? "bg-black rounded rounded-lg p-2 text-white"
+                : ""
+            }
           >
             Kids
           </li>
           <li
-            onClick={() => setnavActive("collections")}
-            className={navActive === "collections" ? "bg-black rounded rounded-lg p-2 text-white" : ""}
+            onClick={() => {setnavActive("collections")
+              setnewModalopen("collections")
+            }}
+            className={
+              navActive === "collections"
+                ? "bg-black rounded rounded-lg p-2 text-white"
+                : ""
+            }
           >
             Collections
           </li>
           <li
-            onClick={() => setnavActive("Brands")}
-            className={navActive === "Brands" ? "bg-black rounded rounded-lg p-2 text-white" : ""}
+            onClick={() => {setnavActive("Brands")
+              setnewModalopen("Brands")
+            }}
+            className={
+              navActive === "Brands"
+                ? "bg-black rounded rounded-lg p-2 text-white"
+                : ""
+            }
           >
             Brands
           </li>
           <li
-            onClick={() => setnavActive("sale")}
-            className={navActive === "sale" ? "bg-black rounded rounded-lg p-2 text-white" : ""}
+            onClick={() => {setnavActive("sale")
+              setnewModalopen("sale")
+            }}
+            className={
+              navActive === "sale"
+                ? "bg-black rounded rounded-lg p-2 text-white"
+                : ""
+            }
           >
             {" "}
             sale
           </li>
           <li
-            onClick={() => setnavActive("gifts")}
-            className={navActive === "gifts" ? "bg-black rounded rounded-lg p-2 text-white" : ""}
+            onClick={() => {setnavActive("gifts")
+              setnewModalopen("gifts")
+            }}
+            className={
+              navActive === "gifts"
+                ? "bg-black rounded rounded-lg p-2 text-white"
+                : ""
+            }
           >
             Gifts
           </li>

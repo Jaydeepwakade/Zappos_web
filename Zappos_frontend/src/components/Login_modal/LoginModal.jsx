@@ -1,16 +1,19 @@
 import React, { useContext, useState } from "react";
 import cross from "../../assets/cross.svg";
 import { ModalContext } from "../../contexts/ModalContext";
+import { NewModalContext } from "../../contexts/newModalContext";
 
 function LoginModal() {
   const { ModalOpen, setModalOpen } = useContext(ModalContext);
+  const {setnewModalopen} = useContext(NewModalContext)
+
 
   const onCloseButton = () => {
     setModalOpen(!ModalOpen);
     console.log(ModalOpen);
   };
   return (
-    <div className=" fixed  inset-0 bg-opacity-50 m-auto flex justify-center items-center">
+    <div className=" fixed  inset-0 bg-opacity-50 m-auto flex justify-center items-center z-50">
       
       <div className=" w-2/4 h-auto shadow-lg bg-white  border rounded-2xl">
         <div className="flex justify-between   border-b-2 border-gray-400">

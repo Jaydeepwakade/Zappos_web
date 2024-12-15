@@ -2,13 +2,13 @@ import React, { createContext, useContext } from "react";
 import { NewModalContext } from "../../contexts/newModalContext";
 import { NavLink } from "react-router-dom";
 
-function NewModal() {
+function SaleModal() {
   const { newModalopen, setnewModalopen } = useContext(NewModalContext);
   return (
     <div className="animate-slideDown w-3/4 ml-4 fixed inset-0  m-34 mt-[8rem] bg-white shadow-stone-500 rounded-2xl border p-2 h-[35rem] flex justify-center z-50">
       <div className="  h-auto gap-7 flex justify-between ">
         <div className="flex flex-col gap-2 ">
-          <h3 className=" font-bold text-lg  pb-2">New by category</h3>
+          <h3 className=" font-bold text-lg  pb-2">Sale by category</h3>
           <div className="flex flex-col gap-3 font-semibold mt-3">
             <NavLink>Shoes</NavLink>
             <NavLink>Clothing</NavLink>
@@ -78,4 +78,4 @@ function NewModal() {
   );
 }
 
-export default NewModal;
+export default SaleModal;
